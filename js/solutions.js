@@ -33,6 +33,7 @@ function nan_expand(times){
       result += 'Not a ';
     };
 
+
     //console.log(result + 'NaN');
     return result + 'NaN';
   }
