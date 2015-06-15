@@ -8,7 +8,7 @@ public class Binary {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         String binary = toBinary(n);
-        System.out.println(countBits(n));
+        System.out.println(isPowerOfTwo(binary));
     }
 
     public static String toBinary(int n) {
@@ -45,7 +45,15 @@ public class Binary {
         return nBinary.length();
     }
 
-    /*public static boolean isPowerOfTwo(String binary){
+    public static boolean isPowerOfTwo(String binary){
+        int myNum = toNumber(binary);
 
-    }*/
+        while(myNum > 1){
+            if(myNum % 2 != 0){
+                return false;
+            }
+            myNum /= 2;
+        }
+        return true;
+    }
 }
