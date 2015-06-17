@@ -1,41 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f71e284-e066-448b-b151-acd9e38eefa9" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week1\.idea\.name" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week1\.idea\compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week1\.idea\copyright\profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week1\.idea\misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week1\.idea\modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week1\.idea\vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week1\.idea\workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week1\out\production\week1\com\hackbulgaria\programming51\week1\Binary.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week1\out\production\week1\com\hackbulgaria\programming51\week1\Calculator.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week1\out\production\week1\com\hackbulgaria\programming51\week1\IntegerPalindrome.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week1\out\production\week1\com\hackbulgaria\programming51\week1\PalindromeScore.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week1\src\com\hackbulgaria\programming51\week1\Binary.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week1\src\com\hackbulgaria\programming51\week1\Calculator.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week1\src\com\hackbulgaria\programming51\week1\IntegerPalindrome.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week1\src\com\hackbulgaria\programming51\week1\PalindromeScore.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week1\week1.iml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week2\.idea\.name" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week2\.idea\compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week2\.idea\copyright\profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week2\.idea\misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week2\.idea\modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week2\.idea\uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week2\.idea\vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week2\.idea\workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week2\out\production\week2\com\bulgaria\programing51\week2\Coffee.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week2\out\production\week2\com\bulgaria\programing51\week2\CoffeeMachine.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week2\out\production\week2\com\bulgaria\programing51\week2\Person.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week2\out\production\week2\com\bulgaria\programing51\week2\example.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week2\src\com\bulgaria\programing51\week2\Coffee.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week2\src\com\bulgaria\programing51\week2\CoffeeMachine.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week2\src\com\bulgaria\programing51\week2\Person.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week2\src\com\bulgaria\programing51\week2\example.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Learning projects &amp;\Java_course\Programming51\week2\week2.iml" afterPath="" />
-    </list>
+    <list default="true" id="9f71e284-e066-448b-b151-acd9e38eefa9" name="Default" comment="" />
     <ignored path="Programming51.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -386,8 +352,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
