@@ -16,13 +16,16 @@ public class Fraction {
         a.num = 4;
         a.den = 12;
 
-        System.out.println(a);
-        System.out.println(a.getReal());
+        //System.out.println(a);
+        //System.out.println(a.getReal());
 
         Fraction b = new Fraction();
         b.num = 5;
         b.den = 24;
-        a.sum(b);
+        //a.sum(b);
+        System.out.println(a);
+        a.simplify();
+        System.out.println(a);
     }
 
 
@@ -37,6 +40,12 @@ public class Fraction {
     }
 
     public void simplify(){
-
+        int smallest = (num > den)? den: num;
+        for(int i = smallest; i >= 2; i--){
+            if(num % i == 0 && den % i == 0){
+                num /= i;
+                den /= i;
+            }
+        }
     }
 }
