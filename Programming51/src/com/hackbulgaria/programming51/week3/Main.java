@@ -20,5 +20,13 @@ public class Main {
         System.out.println(conf.getCity().equals("Berlin")); // true
         System.out.println(conf.getCountry().equals("Germany")); // true
         System.out.println(conf.getVat() == 20); // true, VAT = Value Added Tax = ÄÄÑ
+
+        conf.addExpense(dinner);
+
+       System.out.println(conf.totalNetCost()); // true
+       System.out.println(conf.totalCost() == 120); // VAT Included -> true
+
+        Employee[] toFire = conf.mostExpensesMadeBy();
+        System.out.println(toFire[0].getName().equals("Ivaylo")); // true
     }
 }

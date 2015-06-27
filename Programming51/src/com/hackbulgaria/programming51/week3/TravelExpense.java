@@ -16,6 +16,10 @@ public class TravelExpense {
         this.netCost = netCost;
     }
 
+    public String toString(){
+        return "Type: " + type + " Employee: " + employee + " netCost: " + netCost;
+    }
+
     public String getType(){
         return type;
     }
