@@ -43,7 +43,7 @@ public class Travel {
     }
 
     public Employee[] mostExpensesMadeBy(){
-        expensesData.getEmployeeWithMostExpenses();
+        return expensesData.getEmployeesWithMostExpenses();
     }
 
 }

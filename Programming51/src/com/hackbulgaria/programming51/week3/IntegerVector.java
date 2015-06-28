@@ -41,6 +41,10 @@ public class IntegerVector {
         return currentSize;
     }
 
+    public int [] data(){
+        return integerData;
+    }
+
 
     public int sum() {
         int sum = 0;
@@ -62,6 +66,21 @@ public class IntegerVector {
         return integerData[index];
     }
 
+    public void insert(int index, int data){
+        int temp = integerData[index];
+        integerData[index] = data;
+        add(temp);
+    }
+
+    public void remove(int index){
+        if(index < currentSize && index >= 0){
+            for(int i = index; i < currentSize - 1; i++){
+                integerData[i] = integerData[i + 1];
+            }
+            currentSize--;
+        }
+    }
+
     private void resize() {
         capacity = capacity * 2 + 1;
         int[] temp = new int[capacity];
@@ -70,5 +89,4 @@ public class IntegerVector {
         }
         integerData = temp;
     }
-
 }

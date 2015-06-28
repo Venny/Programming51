@@ -1,32 +1,60 @@
 package com.hackbulgaria.programming51.week3;
 
 /**
- * Created by Inspired Day on 6/24/2015.
+ * Created by Inspired Day on 6/28/2015.
  */
 public class Main {
-    public static void main(String args[]){
-        Employee rado = new Employee("Radoslav Georgiev");
-        System.out.println(rado.toString().equals("Radoslav Georgiev")); // true
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        IntegerVector v = new IntegerVector();
+        for (int i = 1; i < 20; i++) {
+            v.add(i);
+        }
+        System.out.println(v);
+        v.add(50);
 
-        Employee ivo = new Employee("Ivaylo");
-        TravelExpense dinner = new TravelExpense("Dinner", ivo, 100);
+        System.out.println(v.size());
+        System.out.println(v.sum());
 
-        System.out.println(dinner.getType().equals("Dinner")); // true
-        System.out.println(dinner.getEmployee().toString().equals("Ivaylo")); // true
-        System.out.println(dinner.getNetCost() == 100); // true
+        int [] b = new int[10];
+        for (int i = 1; i < 10; i++) {
+            b[i] = i;
+        }
+        v.addAll(b);
+        System.out.println(v);
 
-        Travel conf = new Travel("Berlin", "Germany", 20);
+        System.out.println(v.get(3));
+        System.out.println(v.get(9));
 
-        System.out.println(conf.getCity().equals("Berlin")); // true
-        System.out.println(conf.getCountry().equals("Germany")); // true
-        System.out.println(conf.getVat() == 20); // true, VAT = Value Added Tax = ÄÄÑ
+        IntegerVector c = new IntegerVector();
+        for (int i = 1; i < 10; i++) {
+            c.add(i);
+        }
+        System.out.println("Arr c: " + c);
+        c.insert(3, 10);
+        System.out.println(c);
 
-        conf.addExpense(dinner);
+        c.remove(3);
+        System.out.println(c);
 
-       System.out.println(conf.totalNetCost()); // true
-       System.out.println(conf.totalCost() == 120); // VAT Included -> true
 
-        Employee[] toFire = conf.mostExpensesMadeBy();
-        System.out.println(toFire[0].getName().equals("Ivaylo")); // true
+        int [] a = {1,2,3,4,5};
+        IntegerVector vector = new IntegerVector();
+        vector.addAll(a);
+        /*System.out.println(IntegerVectorStatic.toString(vector));
+
+        IntegerVectorStatic.sort(v);
+        System.out.println(IntegerVectorStatic.toString(v));*/
+
+        IntegerVector temp = IntegerVectorStatic.reverse(vector);
+        System.out.println(IntegerVectorStatic.toString(temp));
+
+        IntegerVector e = new IntegerVector();
+        e = IntegerVectorStatic.range(10,20);
+        System.out.println(IntegerVectorStatic.toString(e));
+        IntegerVector temp2 = IntegerVectorStatic.filterOdd(e);
+        System.out.println("Odd: " + temp2);
     }
 }

@@ -13,6 +13,7 @@ public class TravelExpense {
     public TravelExpense(String type, Employee employee, int netCost){
         this.type = type;
         this.employee = employee;
+        employee.addExpense(netCost);
         this.netCost = netCost;
     }
 
@@ -30,5 +31,9 @@ public class TravelExpense {
 
     public int getNetCost(){
         return netCost;
+    }
+
+    public int getEmploeeExpenses(){
+        return employee.getExpenses();
     }
 }
