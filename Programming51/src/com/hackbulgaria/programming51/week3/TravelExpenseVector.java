@@ -41,7 +41,8 @@ public class TravelExpenseVector {
     public Employee[] getEmployeesWithMostExpenses() {
         Employee[] top2Emploees = new Employee[2];
         int index = 0;
-        int index2 = 0;
+        int index2 = (currentSize == 0)? 0: currentSize - 1;
+        System.out.println(currentSize);
         for (int i = 0; i < currentSize; i++) {
             travelExpenseVector[i].getEmploeeExpenses();
             if (travelExpenseVector[index].getEmploeeExpenses() < travelExpenseVector[i].getEmploeeExpenses()) {
