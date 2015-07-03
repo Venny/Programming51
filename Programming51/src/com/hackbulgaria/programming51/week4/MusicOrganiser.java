@@ -4,7 +4,7 @@ package com.hackbulgaria.programming51.week4;
  * Created by Inspired Day on 6/29/2015.
  */
 public class MusicOrganiser {
-    Vector<Song> songs;
+    private Vector<Song> songs;
 
     public MusicOrganiser(){
         songs = new Vector<Song>();
@@ -20,14 +20,55 @@ public class MusicOrganiser {
 
     public Vector<String> getAlbums(){
         Vector<String> albums = new Vector<String>();
-        for(int i = 0; i <= songs.getSize(); i++){
-            albums.add(getAlbum(i));
+        for(int i = 0; i < songs.getSize(); i++){
+            if(uniqueAlbum(albums, i)){
+                albums.add(getAlbum(i));
+            }
         }
         return albums;
     }
 
-    private String getAlbum(int index){
-        return songs.getElement(index).getAlbum();
+    public int getAlbumsCount(){
+        return getAlbums().getSize();
     }
+
+    public Vector<Song> getAlbumSongs(String albumName){
+        Vector<Song> albumSongs = new Vector<>();
+        for(int i = 0; i < songs.getSize(); i++){
+            if(songs.getElement(i).getAlbum() == albumName){
+                albumSongs.add(songs.getElement(i));
+            }
+        }
+        return albumSongs;
+    }
+
+    public Vector<String> getAlbumsAndSongs(){
+        Vector<String> albumsAndSongs = new Vector<>();
+        Vector<String> uniqueAlbums = getAlbums();
+
+        for(int i = 0; i < uniqueAlbums.getSize(); i++){
+            albumsAndSongs.add( uniqueAlbums.getElement(i) + " (" + getAlbumSongs(uniqueAlbums.getElement(i)).getSize() + ")" );
+        }
+
+        return albumsAndSongs;
+    }
+
+    private String getAlbum(int index){
+        if(index < songs.getSize() && index >= 0){
+            return songs.getElement(index).getAlbum();
+        }
+        return null;
+    }
+
+    private boolean uniqueAlbum(Vector<String> albums, int index){
+        for (int i = 0; i < albums.getSize(); i++){
+            if(albums.getElement(i) == getAlbum(index)){
+                return false;
+            }
+        }
+        return true;
+    }
+
+
 
 }

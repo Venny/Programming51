@@ -13,9 +13,11 @@ public class Vector <T> {
     }
 
     public void add(T s){
-        if(size < capacity && size == 0){
-            data[size] = s;
+        if(size == capacity){
+            resize();
         }
+        data[size] = s;
+        size++;
     }
 
     public int getSize() {
@@ -23,10 +25,19 @@ public class Vector <T> {
     }
 
     public T getElement(int index){
-        if(size < capacity && size == 0){
+        if(size < capacity){
             return data[index];
         }
         return null;
+    }
+
+    private void resize() {
+        capacity = capacity * 2 + 1;
+        T [] temp = (T[]) new Object[capacity];
+        for (int i = 0; i < size; i++) {
+            temp[i] = data[i];
+        }
+        data = temp;
     }
 
 }

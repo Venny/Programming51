@@ -17,7 +17,7 @@ public class Song {
     }
 
     public String toString(){
-        return name + " " + artist;
+        return name + " " + artist + " " + duration + " " + album;
     }
 
     public String getAlbum(){
