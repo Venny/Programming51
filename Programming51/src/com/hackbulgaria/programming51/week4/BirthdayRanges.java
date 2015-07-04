@@ -6,7 +6,12 @@ import java.util.Vector;
 /**
  * Created by Inspired Day on 7/1/2015.
  */
-class BirthdayRanges {
+public class BirthdayRanges {
+    public static class IntPair {
+        public int start;
+        public int end;
+    }
+
     public static Vector<Integer> birthdaysCount(Vector<Integer> birthdays, Vector<IntPair> ranges) {
         Vector<Integer> birthdaysCount = new Vector<Integer>();
         int counter = 0;

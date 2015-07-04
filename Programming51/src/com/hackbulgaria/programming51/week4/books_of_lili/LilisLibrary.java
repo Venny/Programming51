@@ -10,17 +10,18 @@ public class LilisLibrary {
     public static Vector<Pair<String, Integer>> orderBooks(Vector<String> books) {
         Vector<Pair<String, Integer>> orderedBooks = new Vector<Pair<String, Integer>>();
         int num = 1;
-        int index = 0;
+        String bookName = "";
 
         sort(books);
-        for(int i = 0; i < books.size(); i++){
-            if(books.get(i).trim().equalsIgnoreCase(books.get(index))){
-                //System.out.println(books.get(i));
+        // Adding a fake element, because the last element is never added
+        books.add("");
+        for(int i = 0; i < books.size() - 1; i++){
+            if(books.get(i).trim().equalsIgnoreCase(books.get(i + 1))){
                 num++;
             }
             else{
-                index = i;
-                orderedBooks.add(new Pair(books.get(index), num));
+                bookName = books.get(i);
+                orderedBooks.add(new Pair(bookName, num));
                 num = 1;
             }
         }
