@@ -13,10 +13,8 @@ public class LilisLibrary {
         String bookName = "";
 
         sort(books);
-        // Adding a fake element, because the last element is never added
-        books.add("");
-        for(int i = 0; i < books.size() - 1; i++){
-            if(books.get(i).trim().equalsIgnoreCase(books.get(i + 1))){
+        for(int i = 0; i < books.size(); i++){
+            if( ( (i +1) < books.size() ) && books.get(i).trim().equalsIgnoreCase(books.get(i + 1)) ){
                 num++;
             }
             else{
@@ -25,7 +23,6 @@ public class LilisLibrary {
                 num = 1;
             }
         }
-
         return orderedBooks;
     }
 
