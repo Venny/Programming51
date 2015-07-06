@@ -12,7 +12,7 @@ public class MissingStudents {
             Vector<String> students, Vector<Vector<String>> presence) {
 
         Vector<Vector<String>> missingStudents = new Vector<Vector<String>>();
-
+        sort(students);
         for(Vector<String> dayPresence: presence){
             Vector<String> missingThisDay = new Vector<>();
             //System.out.println(dayPresence);
@@ -36,6 +36,20 @@ public class MissingStudents {
             }
         }
         return true;
+    }
+
+    private static void sort(Vector<String> data){
+        String temp = "";
+        for(int i = 0; i < data.size() - 1; i++){
+            for(int n = i + 1; n < data.size(); n++){
+                if( data.get(i).compareToIgnoreCase(data.get(n)) > 0 ){
+                    //ascending
+                    temp = data.get(i);               // and just changing the places
+                    data.set(i, data.get(n));
+                    data.set(n, temp);
+                }
+            }
+        }
     }
 
     public static void main(String[] args) {
