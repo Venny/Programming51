@@ -1,4 +1,4 @@
-package com.hackbulgaria.programming51.week5.generic_linked_list;
+package com.hackbulgaria.programming51.week5;
 
 /**
  * Created by Inspired Day on 7/6/2015.
