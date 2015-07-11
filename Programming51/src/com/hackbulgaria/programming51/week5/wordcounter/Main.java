@@ -1,0 +1,28 @@
+package com.hackbulgaria.programming51.week5.wordcounter;
+
+import java.util.Scanner;
+
+/**
+ * Created by Inspired Day on 7/11/2015.
+ */
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String searched = scanner.next();
+        char [][] map;
+        int n,m;
+        n = scanner.nextInt();
+        m = scanner.nextInt();
+        map = new char[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                map[i][j] = scanner.next().charAt(0);
+            }
+        }
+
+        WordCounter counter = new WordCounter(map, searched);
+
+        // Print result here
+        counter.findTheWord();
+    }
+}

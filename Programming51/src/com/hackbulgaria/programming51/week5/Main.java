@@ -39,7 +39,7 @@ public class Main {
         System.out.println(l.size());*/
 
         //3333
-        LinkedList<Integer> l = new LinkedList<>();
+        /*LinkedList<Integer> l = new LinkedList<>();
         LinkedList<Integer> secondL = new LinkedList<>();
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
@@ -54,7 +54,27 @@ public class Main {
 
         System.out.println(StaticLinkedList.reverse(l));
         System.out.println(StaticLinkedList.sort(l));
-        System.out.println(StaticLinkedList.merge(l,secondL));
+        System.out.println(StaticLinkedList.merge(l,secondL));*/
 
+        //4444444
+        Scanner scanner = new Scanner(System.in);
+        LinkedList<Integer> list1 = new LinkedList<>();
+        LinkedList<Integer> list2 = new LinkedList<>();
+        Integer [] arr;
+        int n = scanner.nextInt();
+        for (int i = 0; i < n; i++) {
+            list1.addLast(scanner.nextInt());
+        }
+        n = scanner.nextInt();
+        arr = new Integer[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        list2.addArray(arr);
+        list1.insertListBefore(0, list2);
+        list1.insertListAfter(0, list2);
+
+        System.out.println(list1);
     }
 }

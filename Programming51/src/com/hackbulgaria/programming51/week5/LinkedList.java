@@ -44,7 +44,14 @@ public class LinkedList <T> {
 
     public void insert(int index, T el){
         // Insert an element on the index place
-        insertAfter(index - 1, el);
+        if(index > 0){
+            insertAfter(index - 1, el);
+        } else {
+            Node<T> newEl = new Node<>(el);
+            Node <T> headEl = head;
+            head = newEl;
+            newEl.setNext(headEl);
+        }
     }
 
     public void insertAfter(int index, T el){
@@ -55,14 +62,14 @@ public class LinkedList <T> {
     }
 
     public String toString(){
-        String str = "";
+        String str = "[";
         Node<T> temp = head;
         while(temp.getNext() != null){
-            str += temp.getData() + " ";
+            str += temp.getData() + ", ";
             temp = temp.getNext();
         }
 
-        return str += temp.getData();
+        return str += temp.getData() + "]";
     }
 
     public void addFirst(T data){
@@ -92,10 +99,7 @@ public class LinkedList <T> {
     public boolean contains(T data) {
         // Returns true if the list contains the element
         int temp = findElementByData(data);
-        if( temp < 0 ){
-            return false;
-        }
-        return true;
+        return temp >= 0;
     }
 
     public int getElementIndex(T data) {
@@ -115,6 +119,41 @@ public class LinkedList <T> {
                 counter++;
             }
         }
+    }
+
+    public T[] toArray() {
+        // Returns an array with all the elements in the list
+        int listSize = size();
+        T[] toArray = (T[]) new Object[listSize];
+        Node<T> temp = head;
+        for(int i = 0; i < toArray.length; i++){
+            toArray[i] = temp.getData();
+            temp = temp.getNext();
+        }
+        return toArray;
+    }
+
+    public void addArray(T[] arr) {
+        // Appends the array at the end of the list
+        for(int i = 0; i < arr.length; i++){
+            add(arr[i]);
+        }
+    }
+    public void clear(){
+        head = null;
+        tail = null;
+    }
+    public void insertListBefore(int index, LinkedList<T> l){
+        // Inserts all the elements of l before the index element
+        int lSize = l.size();
+        for (int i = 0; i <lSize; i++){
+            insert(index, l.get(i));
+            index++;
+        }
+    }
+    public void insertListAfter(int index, LinkedList<T> l) {
+        // Inserts all the elements of l after the index element
+        insertListBefore(index + 1, l);
     }
 
     private Node<T> findElementByIndex(int index){
