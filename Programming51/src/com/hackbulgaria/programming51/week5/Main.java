@@ -16,7 +16,8 @@ public class Main {
         l.remove(1);
         //System.out.println(l);*/
 
-        Scanner scanner = new Scanner(System.in);
+        //2222
+        /*Scanner scanner = new Scanner(System.in);
         LinkedList<Integer> l = new LinkedList<>();
         int n;
         n = scanner.nextInt();
@@ -35,6 +36,25 @@ public class Main {
         System.out.println(l.contains(x));
         System.out.println(l.getFirst() + " " + l.getLast());
         System.out.println(l);
+        System.out.println(l.size());*/
+
+        //3333
+        LinkedList<Integer> l = new LinkedList<>();
+        LinkedList<Integer> secondL = new LinkedList<>();
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        for (int i = 0; i < n; i++) {
+            l.add(scanner.nextInt());
+        }
+        n = scanner.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            secondL.add(scanner.nextInt());
+        }
+
+        System.out.println(StaticLinkedList.reverse(l));
+        System.out.println(StaticLinkedList.sort(l));
+        System.out.println(StaticLinkedList.merge(l,secondL));
 
     }
 }

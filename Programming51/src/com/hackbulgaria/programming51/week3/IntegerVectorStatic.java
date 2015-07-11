@@ -27,7 +27,8 @@ public class IntegerVectorStatic {
         int [] data = v.data();
         int index = 0;
         for(int i = 0; i < v.size(); i++){
-            for (int n = i; n < v.size(); i++){
+            index = i;
+            for (int n = i; n < v.size(); n++){
                 if(data[n] < data[index]){
                     index = n;
                 }

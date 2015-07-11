@@ -105,13 +105,22 @@ public class LinkedList <T> {
 
     public int size() {
         // Returns the size of the list
-        return -1;
+        Node<T> temp = head;
+        int counter = 1;
+        while(true){
+            if(temp.getNext() == null){
+                return counter;
+            } else{
+                temp = temp.getNext();
+                counter++;
+            }
+        }
     }
 
     private Node<T> findElementByIndex(int index){
         Node<T> temp = head;
         int counter = 0;
-        while(true){
+        while(counter <= index){
             if(counter == index){
                 return temp;
             } else{
@@ -119,6 +128,7 @@ public class LinkedList <T> {
                 counter++;
             }
         }
+        return null;
     }
 
     private int findElementByData(T data){
