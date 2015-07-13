@@ -23,6 +23,6 @@ public class Main {
         WordCounter counter = new WordCounter(map, searched);
 
         // Print result here
-        counter.findTheWord();
+        System.out.println(counter.findTheWord());
     }
 }
