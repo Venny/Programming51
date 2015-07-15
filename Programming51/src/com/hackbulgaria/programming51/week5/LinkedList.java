@@ -121,16 +121,15 @@ public class LinkedList <T> {
         }
     }
 
-    public T[] toArray() {
+    public T[] toArray(T[] arr) {
         // Returns an array with all the elements in the list
         int listSize = size();
-        T[] toArray = (T[]) new Object[listSize];
         Node<T> temp = head;
-        for(int i = 0; i < toArray.length; i++){
-            toArray[i] = temp.getData();
+        for(int i = 0; i < arr.length; i++){
+            arr[i] = temp.getData();
             temp = temp.getNext();
         }
-        return toArray;
+        return arr;
     }
 
     public void addArray(T[] arr) {
