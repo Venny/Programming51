@@ -7,4 +7,5 @@ public interface Weapon {
     public int getDamage();
     public int getDurability();
     public String getType(); // can return "TO_SMASH" or "TO_SHOOT"
+    public void hit();
 }

@@ -6,20 +6,30 @@ package com.hackbulgaria.programming51.week6.zombie_apocalypse;
 public class Shotgun implements Weapon {
     private int damage = 25;
     private int durability = 10;
+    private int currentDurability = 10;
     private String type = "TO_SHOOT";
 
     @Override
     public int getDamage() {
-        return 0;
+        return damage;
     }
 
     @Override
     public int getDurability() {
-        return 0;
+        return currentDurability;
     }
 
     @Override
     public String getType() {
-        return null;
+        return type;
+    }
+
+    @Override
+    public void hit() {
+        if(currentDurability > 0){
+            currentDurability--;
+        } else {
+            durability = 1;
+        }
     }
 }

@@ -1,5 +1,6 @@
 package com.hackbulgaria.programming51.week6.zombie_apocalypse;
 
+import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 /**
@@ -8,11 +9,40 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
+        int zombiesNum = scanner.nextInt();
         int zombieHealth = scanner.nextInt();
-        String weapon = scanner.next();
-        System.out.println(n + " " + zombieHealth + " " + weapon);
+        String weapon = scanner.next().toLowerCase();
 
-
+        Weapon currentWeapon;
+        int hits = 0;
+        switch (weapon){
+            case "axe":
+               currentWeapon = new Axe();
+            break;
+            case "sword":
+                currentWeapon = new AncientSword();
+                break;
+            case "shotgun":
+                currentWeapon = new Shotgun();
+                break;
+            case "revolver":
+                currentWeapon = new Revolver();
+                break;
+            default:
+                currentWeapon = null;
+                    break;
+        }
+        Zombie[] zombies = new Zombie[zombiesNum];
+        for(int i = 0; i < zombiesNum; i++){
+            zombies[i] = new GreenZombie(zombieHealth);
+        }
+        for(Zombie zombie:zombies){
+            while (!zombie.isDead()){
+                currentWeapon.hit();
+                zombie.hit(currentWeapon.getDamage());
+                hits ++;
+            }
+        }
+        System.out.println(hits);
     }
 }

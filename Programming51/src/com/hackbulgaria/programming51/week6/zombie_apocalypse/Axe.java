@@ -6,6 +6,7 @@ package com.hackbulgaria.programming51.week6.zombie_apocalypse;
 public class Axe implements Weapon {
     private int damage = 10;
     private int durability = 50;
+    private int currentDurability = 50;
     private String type = "TO_SMASH";
 
     @Override
@@ -15,11 +16,21 @@ public class Axe implements Weapon {
 
     @Override
     public int getDurability() {
-        return durability;
+        return currentDurability;
     }
 
     @Override
     public String getType() {
         return type;
+    }
+
+    @Override
+    public void hit() {
+        if(currentDurability <= durability/2 && currentDurability > 1){
+            damage--;
+        }
+        if(currentDurability > 0){
+            currentDurability--;
+        }
     }
 }
