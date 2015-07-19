@@ -23,7 +23,7 @@ public class WordCounter {
                 }
             }
         }
-        return ( parindrom(word)? wordCounter/2: wordCounter );
+        return ( palindrom(word)? wordCounter/2: wordCounter );
     }
 
     private int ifWordExists(int row, int col){
@@ -132,7 +132,6 @@ public class WordCounter {
                 wordCounter += (match)? 1: 0;
             }
         }
-
         // up
         counter = 0;
         match = true;
@@ -150,14 +149,13 @@ public class WordCounter {
                 }
                 wordCounter += (match)? 1: 0;
             }
-
             // -->
             counter = 0;
             match = true;
             i = row;
             j = col;
             if(word.length() <= matrix[row].length - col){
-                while (i > row - (word.length() - 1) && j < col + (word.length() - 1)){
+                while (i > row - word.length() && j < col + word.length()){
                     if(matrix[i][j] != word.charAt(counter)){
                         match = false;
                         break;
@@ -167,11 +165,10 @@ public class WordCounter {
                 wordCounter += (match)? 1: 0;
             }
         }
-
         return wordCounter;
     }
 
-    private boolean parindrom(String word){
+    private boolean palindrom(String word){
        for(int i = word.length()-1; i >= 0; i--){
            if(word.charAt(i) != word.charAt(word.length()-1 - i)){
                return false;
@@ -193,9 +190,7 @@ public class WordCounter {
                 map[i][j] = scanner.next().charAt(0);
             }
         }
-
         WordCounter counter = new WordCounter(map, searched);
-
         // Print result here
         System.out.println(counter.findTheWord());
     }
