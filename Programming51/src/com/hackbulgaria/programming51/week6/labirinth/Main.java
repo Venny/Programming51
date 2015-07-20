@@ -19,8 +19,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         while(!firstLevel.getSuccess()){
-            System.out.println("Make your move: ");
             firstLevel.print();
+            System.out.println("Make your move: ");
             Movement personMovement;
             String move = scanner.next().toLowerCase();
             switch (move){
@@ -33,8 +33,8 @@ public class Main {
                 case "down": personMovement = new MoveDown();
                     break;
                 default:
-                    personMovement = new Movement();
                     System.out.println("Unknown move!");
+                    return;
             }
             firstLevel.movePerson(personMovement);
         }

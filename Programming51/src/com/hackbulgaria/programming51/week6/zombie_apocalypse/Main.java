@@ -38,8 +38,7 @@ public class Main {
         }
         for(Zombie zombie:zombies){
             while (!zombie.isDead()){
-                currentWeapon.hit();
-                zombie.hit(currentWeapon.getDamage());
+                zombie.hit(currentWeapon.hit());
                 hits ++;
             }
         }
