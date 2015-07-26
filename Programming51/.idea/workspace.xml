@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f71e284-e066-448b-b151-acd9e38eefa9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hackbulgaria/programming51/week7/functioncallextended/FuncCalls.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hackbulgaria/programming51/week7/functioncallextended/Function.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Programming51/com/hackbulgaria/programming51/week7/functioncalls/Parser.class" afterPath="$PROJECT_DIR$/out/production/Programming51/com/hackbulgaria/programming51/week7/functioncalls/Parser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hackbulgaria/programming51/week7/functioncalls/Parser.java" afterPath="$PROJECT_DIR$/src/com/hackbulgaria/programming51/week7/functioncalls/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hackbulgaria/programming51/week7/functioncallextended/FuncCalls.java" afterPath="$PROJECT_DIR$/src/com/hackbulgaria/programming51/week7/functioncallextended/FuncCalls.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hackbulgaria/programming51/week7/functioncallextended/Function.java" afterPath="$PROJECT_DIR$/src/com/hackbulgaria/programming51/week7/functioncallextended/Function.java" />
     </list>
     <ignored path="Programming51.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,40 +29,39 @@
         <entry file="file://$PROJECT_DIR$/src/com/hackbulgaria/programming51/week7/functioncalls/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="5" selection-start-line="19" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FuncCalls.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/hackbulgaria/programming51/week7/functioncallextended/FuncCalls.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6395349">
-              <caret line="51" column="37" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="37" />
+              <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#288#289#0" expanded="true" />
-                <element signature="e#339#340#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Function.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FuncCalls.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hackbulgaria/programming51/week7/functioncallextended/FuncCalls.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.7647057">
+              <caret line="103" column="16" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#264#265#0" expanded="true" />
+                <element signature="e#315#316#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Function.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hackbulgaria/programming51/week7/functioncallextended/Function.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.25581396">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding>
-                <element signature="e#328#329#0" expanded="true" />
-                <element signature="e#355#356#0" expanded="true" />
-                <element signature="e#395#396#0" expanded="true" />
-                <element signature="e#427#428#0" expanded="true" />
-                <element signature="e#458#459#0" expanded="true" />
-                <element signature="e#485#486#0" expanded="true" />
-                <element signature="e#525#526#0" expanded="true" />
-                <element signature="e#557#558#0" expanded="true" />
+                <element signature="e#327#328#0" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
+                <element signature="e#385#386#0" expanded="true" />
+                <element signature="e#412#413#0" expanded="true" />
+                <element signature="method#toString#0;class#Function#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -961,39 +957,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hackbulgaria/programming51/week7/functioncallextended/Function.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-          <folding>
-            <element signature="e#328#329#0" expanded="true" />
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hackbulgaria/programming51/week7/functioncalls/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="5" selection-start-line="19" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
-          <folding />
+          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hackbulgaria/programming51/week7/functioncallextended/FuncCalls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6395349">
-          <caret line="51" column="37" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="37" />
+        <state vertical-scroll-proportion="-5.7647057">
+          <caret line="103" column="16" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hackbulgaria/programming51/week7/functioncallextended/Function.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25581396">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
+            <element signature="method#toString#0;class#Function#0" expanded="false" />
           </folding>
         </state>
       </provider>

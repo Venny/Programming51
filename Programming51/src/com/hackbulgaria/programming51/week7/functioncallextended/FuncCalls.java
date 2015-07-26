@@ -2,7 +2,6 @@ package com.hackbulgaria.programming51.week7.functioncallextended;
 
 import java.util.LinkedList;
 import java.util.Scanner;
-import java.util.Stack;
 
 /**
  * Created by Inspired Day on 7/24/2015.
@@ -17,18 +16,19 @@ public class FuncCalls {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         scanner.useDelimiter("\\n"); // Changing the delimiter to accept and undrestand new lines
-        FuncCalls funcStask = new FuncCalls();
+        FuncCalls funcData = new FuncCalls();
 
         int funcsNum = scanner.nextInt();
         String[] funcs = new String[funcsNum];
         for(int i = 0; i < funcs.length; i++){
             funcs[i] = scanner.next();
-            funcStask.addFunc(funcs[i]);
+            funcData.addFunc(funcs[i]);
         }
         String newFunc = scanner.next();
         int x = scanner.nextInt();
 
-        funcStask.evaluate(newFunc, x);
+        int finalResult = funcData.evaluate(newFunc, x);
+        System.out.println(finalResult);
     }
 
     public void addFunc(String func){
@@ -40,20 +40,24 @@ public class FuncCalls {
     }
 
     public int evaluate(String formula, int x) {
-        Stack<String> funcsNames = new Stack<>();
         int result = 0;
-        int funcCounter = funcCallsCount(formula);
-        String[] names = formula.split(" . ", funcCounter);
+        String[] names = formula.split(" . ", funcCallsCount(formula));
 
-        for (int i = 0; i < names.length; i++){
-            funcsNames.push(names[i]);
-        }
-        /*while(!(funcsNames.size() == 0)){
-            //result = findFuncResult(funcs.peek(), x);
-            funcsNames.pop();
+        for(int i = names.length - 1; i >= 0; i--){
+            result = findFuncResult(names[i], x);
             x = result;
-        }*/
+        }
+        return result;
+    }
 
+    private int findFuncResult(String f, int x){
+        int result = 0;
+        int size = functions.size();
+        for(int i = 0; i < size; i++){
+            if(functions.get(i).getName().equals(f)){
+                result = calculate(functions.get(i).getBody().trim(), x);
+            }
+        }
         return result;
     }
 
@@ -65,6 +69,47 @@ public class FuncCalls {
             }
         }
         return funcCounter;
+    }
+
+    private int calculate(String body, int x) {
+        boolean plus = false;
+        int result = 0;
+        int counter = 0;
+        for(String word:body.split(" ")){
+            boolean signs =  word.matches("\\+") || word.matches("-");
+            if( (counter == 0 && !signs && word.matches("^\\d+$") || word.equals("x")) ){
+                result = findTheString(word, x);
+            } else {
+                if(signs){
+                    plus = word.matches("\\+");
+                } else {
+                    if(plus){
+                        result += findTheString(word, x);
+                    } else {
+                        result -= findTheString(word, x);
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
+    private int findTheString(String word, int x){
+        int result = 0;
+        int xParameter = x;
+        if(word.equals("x")){
+            result = x;
+        } else if(word.matches("^\\d+$")) {
+            result = Integer.parseInt(word);
+        } else {
+            // If the function has different parameter from x
+            if(!word.split("\\(")[1].contains("x")){
+                xParameter = Integer.parseInt( word.split("\\(")[1].split("\\)")[0]);
+            }
+            result = findFuncResult(word.split("\\(")[0], xParameter);
+            xParameter = x; // reset the xParameter, because it's different only for this function
+        }
+        return result;
     }
 
 }
