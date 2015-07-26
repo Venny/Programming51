@@ -41,11 +41,12 @@ public class FuncCalls {
 
     public int evaluate(String formula, int x) {
         int result = 0;
-        String[] names = formula.split(" . ", funcCallsCount(formula));
+        int xParam = x;
+        String[] names = formula.split(" . ");
 
         for(int i = names.length - 1; i >= 0; i--){
-            result = findFuncResult(names[i], x);
-            x = result;
+            result = findFuncResult(names[i], xParam);
+            xParam = result;
         }
         return result;
     }
@@ -56,19 +57,10 @@ public class FuncCalls {
         for(int i = 0; i < size; i++){
             if(functions.get(i).getName().equals(f)){
                 result = calculate(functions.get(i).getBody().trim(), x);
+                return result;
             }
         }
         return result;
-    }
-
-    private int funcCallsCount(String formula){
-        int funcCounter = 1;
-        for(int i = 0; i < formula.length(); i++){
-            if(formula.charAt(i) == '.'){
-                funcCounter++;
-            }
-        }
-        return funcCounter;
     }
 
     private int calculate(String body, int x) {
@@ -77,8 +69,9 @@ public class FuncCalls {
         int counter = 0;
         for(String word:body.split(" ")){
             boolean signs =  word.matches("\\+") || word.matches("-");
-            if( (counter == 0 && !signs && word.matches("^\\d+$") || word.equals("x")) ){
+            if( counter == 0 && !signs ){
                 result = findTheString(word, x);
+                counter = 1;
             } else {
                 if(signs){
                     plus = word.matches("\\+");
@@ -95,21 +88,20 @@ public class FuncCalls {
     }
 
     private int findTheString(String word, int x){
-        int result = 0;
         int xParameter = x;
+
         if(word.equals("x")){
-            result = x;
+            return xParameter;
         } else if(word.matches("^\\d+$")) {
-            result = Integer.parseInt(word);
+            return Integer.parseInt(word);
+
         } else {
             // If the function has different parameter from x
             if(!word.split("\\(")[1].contains("x")){
                 xParameter = Integer.parseInt( word.split("\\(")[1].split("\\)")[0]);
             }
-            result = findFuncResult(word.split("\\(")[0], xParameter);
-            xParameter = x; // reset the xParameter, because it's different only for this function
+            return findFuncResult(word.split("\\(")[0], xParameter);
         }
-        return result;
     }
 
 }
