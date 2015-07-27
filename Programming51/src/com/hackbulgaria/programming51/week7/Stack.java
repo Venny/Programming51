@@ -31,4 +31,8 @@ public class Stack <E> {
     public String toString(){
         return data.toString();
     }
+
+    public boolean empty() {
+        return data.size() == 0;
+    }
 }
