@@ -17,7 +17,7 @@ public class Stack <E> {
     }
 
     public void pop(){
-        data.remove();
+        data.removeFirst();
     }
 
     public int size(){
