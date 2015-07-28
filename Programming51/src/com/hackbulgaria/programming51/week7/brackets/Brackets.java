@@ -7,7 +7,7 @@ import com.hackbulgaria.programming51.week7.Stack;
  */
 public class Brackets {
     public static boolean areCorrect(String brackets) {
-        Stack<Character> data = new com.hackbulgaria.programming51.week7.Stack<>();
+        Stack<Character> data = new Stack<>();
         for(int i = 0; i < brackets.length(); i++){
             char letter = brackets.charAt(i);
             if(letter == '{' || letter == '[' || letter == '('){
