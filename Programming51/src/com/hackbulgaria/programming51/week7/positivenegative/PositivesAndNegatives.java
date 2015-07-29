@@ -1,53 +1,45 @@
 package com.hackbulgaria.programming51.week7.positivenegative;
 
-import java.util.Scanner;
 import java.util.Stack;
 
 /**
  * Created by Inspired Day on 7/27/2015.
  */
 public class PositivesAndNegatives {
+    private int[] data;
 
-    public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-
-        int n = scanner.nextInt();
-        int[] arr = new int[n];
-        for(int i = 0; i < n; i++){
-            arr[i] = scanner.nextInt();
-        }
-
-        Stack<Integer> result = reorder(arr);
-
-        while(!result.isEmpty()) {
-            System.out.println(result.pop());
-        }
+    public PositivesAndNegatives(int[] data){
+        this.data = data;
     }
 
-    public static Stack<Integer> reorder(int[] numbers) {
+    public Stack<Integer> reorder() {
         Stack<Integer> result = new Stack<>();
-        int index = 0;
-        for (int i = 0; i < numbers.length; i++){
-            for (int n = i; n < numbers.length; n++){
-                if(numbers[n] < numbers[index] && numbers[n] >= 0){
+        order();
+        for(int num:data){
+            if(num >= 0){
+                result.push(num);
+            }
+        }
+        for(int i = data.length - 1; i >= 0; i--){
+            if(data[i] < 0 ){
+                result.push(data[i]);
+            }
+        }
+        return result;
+    }
+
+    private void order(){
+        int index;
+        for (int i = 0; i < data.length; i++){
+            index = i;
+            for (int n = i; n < data.length; n++){
+                if(data[n] < data[index]){
                     index = n;
                 }
             }
-            int temp = numbers[i];
-            numbers[i] = numbers[index];
-            numbers[index] = temp;
+            int temp = data[i];
+            data[i] = data[index];
+            data[index] = temp;
         }
-
-        return result;
-    }
-
-    private static Stack<Integer> orderedStack(int[] orderedNums){
-        Stack<Integer> result = new Stack<>();
-        for(int i = 0; i < orderedNums.length; i++){
-            if(orderedNums[i] < 0){
-
-            }
-        }
-        return result;
     }
 }

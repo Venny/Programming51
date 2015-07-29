@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**
  * Created by Inspired Day on 7/22/2015.
  */
-public class Stack <E> {
+public class Stack <E> implements DataStructure<E> {
     private LinkedList<E> data;
 
     public Stack(){
@@ -16,8 +16,8 @@ public class Stack <E> {
         data.addFirst(element);
     }
 
-    public void pop(){
-        data.removeFirst();
+    public E pop(){
+        return data.removeFirst();
     }
 
     public int size(){
@@ -26,6 +26,10 @@ public class Stack <E> {
 
     public E peek(){
         return data.getFirst();
+    }
+
+    public boolean isEmpty() {
+        return data.size() == 0;
     }
 
     public String toString(){

@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * Created by Inspired Day on 7/22/2015.
  */
-public class Queue<T> {
+public class Queue<T> implements DataStructure<T> {
     private LinkedList<T> data;
 
     public Queue(){
@@ -17,8 +17,8 @@ public class Queue<T> {
         data.add(element);
     }
 
-    public void pop(){
-        data.removeFirst();
+    public T pop(){
+        return data.removeFirst();
     }
 
     public int size(){
@@ -27,6 +27,11 @@ public class Queue<T> {
 
     public T peek(){
         return data.getFirst();
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return data.size() == 0;
     }
 
 }
