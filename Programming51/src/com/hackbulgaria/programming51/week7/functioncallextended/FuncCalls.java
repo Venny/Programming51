@@ -15,7 +15,7 @@ public class FuncCalls {
 
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        scanner.useDelimiter("\\n"); // Changing the delimiter to accept and undrestand new lines
+        scanner.useDelimiter("\\n"); // Changing the delimiter to accept and understand new lines
         FuncCalls funcData = new FuncCalls();
 
         int funcsNum = scanner.nextInt();
